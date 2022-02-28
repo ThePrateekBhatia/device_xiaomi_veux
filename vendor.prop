@@ -205,9 +205,6 @@ persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpm.nsrm.bkg.evt=3955
 persist.vendor.dpmhalservice.enable=1
 
-# DRM
-drm.service.enabled=true
-
 # FS-verity
 ro.apk_verity.mode=2
 
