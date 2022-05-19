@@ -37,6 +37,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
 
+# Setup
+PRODUCT_PACKAGES += \
+    PixelSetupWizardResTarget
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
