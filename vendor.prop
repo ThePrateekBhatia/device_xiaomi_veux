@@ -199,6 +199,7 @@ ro.vendor.display.svi=1
 vendor.display.svi.config=1
 vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
 ro.vendor.display.sensortype=2
+vendor.display.disable_metadata_dynamic_fps=1
 
 # DPM
 persist.vendor.dpm.feature=1
