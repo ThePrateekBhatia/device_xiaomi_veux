@@ -878,4 +878,7 @@
         <item>org.lineageos.aperture.dev</item>
     </string-array>
 
+    <!-- Default component for QR code scanner -->
+    <string name="config_defaultQrCodeComponent" translatable="false"></string>
+
 </resources>
