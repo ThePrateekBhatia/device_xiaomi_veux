@@ -753,6 +753,13 @@ vendor/firmware/evass.b19
 vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
 
+# Diag HAL
+-vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
+vendor/bin/diag-router
+vendor/etc/init/vendor.qti.diag.rc
+vendor/lib64/vendor.qti.diaghal@1.0.so
+
+
 # Display - from XQ-BC72 61.2.A.0.410
 vendor/etc/display/DPU660.xml|b26dd73e361546d89bf3d7082a471703dc6ac2cb
 vendor/etc/display/DPU670.xml|e5131a60ceff29ca5eb561eec7eddadef1d0486f
@@ -1504,7 +1511,6 @@ system_ext/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/bin/hw/qcrilNrd
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
-vendor/bin/diag-router
 vendor/bin/netmgrd
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
