@@ -7,6 +7,14 @@ persist.vendor.cne.feature=1
 # Disable Skia tracing by default
 debug.hwui.skia_atrace_enabled=false
 
+# Fling
+ro.min.fling_velocity=160
+ro.max.fling_velocity=20000
+ro.vendor.qti.cgroup_follow.enable=true
+persist.vendor.qti.inputopts.enable=true
+persist.vendor.qti.inputopts.movetouchslop=0.6
+ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
+
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
