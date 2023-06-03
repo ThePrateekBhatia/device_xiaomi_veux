@@ -41,9 +41,6 @@ AUDIO_FEATURE_ENABLED_GKI := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 
 # Sepolicy - XiaomiParts
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy/private/xiaomi/devicesettings
-
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy/public/xiaomi/devicesettings
 
