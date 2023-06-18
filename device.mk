@@ -306,6 +306,7 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libOmxVidcCommon \
     libstagefrighthw \
+    libstagefrighthw.vendor \
     libstagefright_omx \
     libstagefright_foundation \
     libstagefright_softomx.vendor
