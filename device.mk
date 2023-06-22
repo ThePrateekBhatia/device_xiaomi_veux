@@ -4,6 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from vendor blobs
+$(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
+
+# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -137,6 +143,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Disable SF configstore
 PRODUCT_PACKAGES += \
     disable_configstore
+
+# DeviceSettings
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # Display
 PRODUCT_PACKAGES += \
@@ -289,6 +299,10 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl \
     android.hardware.secure_element@1.0.vendor \
     com.android.nfc_extras \
+    libchrome.vendor \
+    vendor.nxp.nxpese@1.0 \
+    vendor.nxp.nxpnfclegacy@1.0 \
+    vendor.nxp.nxpnfclegacy@1.0.vendor \
     NfcNci \
     SecureElement \
     Tag
@@ -566,6 +580,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
-
-# Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
