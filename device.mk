@@ -4,12 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
-
-# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
-
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -18,9 +12,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -58,8 +49,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audioadsprpcd \
     audio.r_submix.default \
-    audio.usb.default \
-    libtinycompress
+    audio.usb.default
 
 PRODUCT_PACKAGES += \
     libvolumelistener \
@@ -80,6 +70,7 @@ PRODUCT_PACKAGES += \
     libreverbwrapper \
     libsndmonitor \
     libspkrprot \
+    libtinycompress \
     libvisualizer
 
 # Audio Configs
@@ -179,9 +170,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor
-
-# Dex
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -569,3 +557,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
