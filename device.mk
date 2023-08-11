@@ -306,7 +306,10 @@ PRODUCT_PACKAGES += \
     vendor.nxp.nxpese@1.0 \
     vendor.nxp.nxpnfclegacy@1.0 \
     vendor.nxp.nxpnfclegacy@1.0.vendor \
-    Tag
+    Tag \
+    NfcNci \
+    SecureElement \
+    com.android.nfc_extras
 
 # OMX
 PRODUCT_PACKAGES += \
