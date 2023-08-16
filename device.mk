@@ -517,6 +517,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# TrustedUI
+PRODUCT_PACKAGES += \
+    android.hidl.memory.block@1.0.vendor
+
 # Update Engine
 PRODUCT_PACKAGES += \
     update_engine \
