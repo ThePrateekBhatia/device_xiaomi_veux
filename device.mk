@@ -337,6 +337,7 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayVeux \
     SettingsLibOverlayVeux \
     TelephonyOverlayVeux \
+    TetheringResOverlayVeux \
     WifiOverlayVeux \
     WifiOverlayS88006AA1 \
     WifiOverlayS88007AA1 \
