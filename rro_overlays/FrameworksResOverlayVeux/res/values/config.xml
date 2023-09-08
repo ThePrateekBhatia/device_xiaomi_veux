@@ -949,4 +949,7 @@
          Refer to power.h for details.
     -->
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+
+    <!-- Device model (Build.MODEL) to spoof for netflix -->
+    <string name="config_netflixSpoofModel" translatable="false">23049PCD8G</string>
 </resources>
