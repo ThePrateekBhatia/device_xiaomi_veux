@@ -949,16 +949,4 @@
          Refer to power.h for details.
     -->
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
-
-    <!-- The number of volume steps for the notification stream -->
-    <integer name="config_audio_notif_vol_steps">15</integer>
-
-    <!-- The default volume for the notification stream -->
-    <integer name="config_audio_notif_vol_default">11</integer>
-
-    <!-- The number of volume steps for the ring stream -->
-    <integer name="config_audio_ring_vol_steps">15</integer>
-
-    <!-- The default volume for the ring stream -->
-    <integer name="config_audio_ring_vol_default">11</integer>
 </resources>
