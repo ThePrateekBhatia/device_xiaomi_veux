@@ -122,12 +122,6 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor \
     libpiex_shim
 
-# Prebuilt packages
-PRODUCT_PACKAGES += \
-    MlkitBarcodeUI \
-    VisionBarcode \
-    QRCameraOverlay
-
 # Consumer IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
