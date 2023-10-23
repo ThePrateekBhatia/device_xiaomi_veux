@@ -16,7 +16,6 @@ static const variant_info_t veux_global_info = {
 
     .brand = "Redmi",
     .device = "veux",
-    .mod_device = "veux_global",
     .marketname = "Redmi Note 11 Pro 5G",
     .model = "2201116SG",
     .name = "veux_global",
@@ -31,7 +30,6 @@ static const variant_info_t veux_in_info = {
 
     .brand = "Redmi",
     .device = "veux",
-    .mod_device = "veux_in_global",
     .marketname = "Redmi Note 11 Pro 5G",
     .model = "2201116SG",
     .name = "veux_in",
@@ -44,7 +42,6 @@ static const variant_info_t veux_info = {
 
     .brand = "Redmi",
     .device = "veux",
-    .mod_device = "veux_global",
     .marketname = "Redmi Note 11E Pro",
     .model = "2201116SC",
     .name = "veux",
@@ -59,7 +56,6 @@ static const variant_info_t peux_in_info = {
 
     .brand = "Redmi",
     .device = "peux",
-    .mod_device = "peux_in_global",
     .marketname = "Redmi Note 11 Pro+ 5G",
     .model = "2201116SI",
     .name = "peux_in",
@@ -72,7 +68,6 @@ static const variant_info_t veux_jp_info = {
 
     .brand = "Redmi",
     .device = "veux",
-    .mod_device = "veux_jp_global",
     .marketname = "Redmi Note 11 Pro 5G",
     .model = "2201116SR",
     .name = "veux_jp",
@@ -87,7 +82,6 @@ static const variant_info_t veux_p_global_info = {
 
     .brand = "POCO",
     .device = "veux",
-    .mod_device = "veux_p_global",
     .marketname = "POCO X4 Pro 5G",
     .model = "2201116PG",
     .name = "veux_p_global",
@@ -102,7 +96,6 @@ static const variant_info_t veux_p_in_info = {
 
     .brand = "POCO",
     .device = "veux",
-    .mod_device = "veux_p_in_global",
     .marketname = "POCO X4 Pro 5G",
     .model = "2201116PG",
     .name = "veux_p_in",
@@ -115,7 +108,6 @@ static const variant_info_t peux_p_in_info = {
 
     .brand = "POCO",
     .device = "veux",
-    .mod_device = "peux_p_in_global",
     .marketname = "POCO X4 Pro 5G",
     .model = "2201116PI",
     .name = "peux_p_in",
