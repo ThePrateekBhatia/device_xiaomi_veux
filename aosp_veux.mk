@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2023 The LineageOS Project
-#          2022-2023 The HorizonDroid Project
+#          2022-2023 The Project Elixir
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -14,15 +14,15 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# HorizonDroid props.
-CUSTOM_BUILD_TYPE := Official
+# Elixir Officials
+IS_PHONE := true
+ELIXIR_BUILD_TYPE := OFFICIAL
 
 # Inherit from veux device
 $(call inherit-product, device/xiaomi/veux/device.mk)
 
-# Inherit some common HorizonDroid stuff.
+# Inherit some common Project Elixir stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 PRODUCT_NAME := aosp_veux
