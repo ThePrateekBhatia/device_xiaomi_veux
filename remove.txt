@@ -1,5 +1,4 @@
 device/xiaomi/
-hardware/xiaomi/
 kernel/xiaomi/
 vendor/xiaomi/
 hardware/lineage/compat
