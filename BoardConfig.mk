@@ -211,3 +211,4 @@ CONFIG_ACS := true
 
 # Inherit from the proprietary version
 include vendor/xiaomi/veux/BoardConfigVendor.mk
+TARGET_KERNEL_NO_GCC := true
