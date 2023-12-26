@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2023 The LineageOS Project
-#          2022-2023 The Project Elixir
+#          2022-2023 The HorizonDroid Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
