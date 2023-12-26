@@ -1,6 +1,0 @@
-<resources>
-    
-    <!-- Face unlock -->
-        <bool name="config_faceAuthOnlyOnSecurityView">true</bool>
-
-</resources>
