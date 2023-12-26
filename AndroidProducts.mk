@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2023 The LineageOS Project
-#          2022-2023 The HorizonDroid Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_veux.mk
 
