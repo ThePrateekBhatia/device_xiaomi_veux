@@ -1,5 +1,0 @@
-device/xiaomi/
-kernel/xiaomi/
-vendor/xiaomi/
-hardware/lineage/compat
-hardware/qcom-caf/sm8350/display
