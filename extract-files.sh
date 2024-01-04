@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2023 The LineageOS Project
+# Copyright (C) 2024 The LineageOS Project
+# Copyright (C) 2024 The Project Elixir
 #
 # SPDX-License-Identifier: Apache-2.0
 #
