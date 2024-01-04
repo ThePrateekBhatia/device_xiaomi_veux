@@ -217,3 +217,6 @@ CONFIG_ACS := true
 
 # Inherit from the proprietary version
 include vendor/xiaomi/veux/BoardConfigVendor.mk
+
+# Inherit firmware
+include vendor/xiaomi/veux-firmware/BoardConfigVendor.mk
