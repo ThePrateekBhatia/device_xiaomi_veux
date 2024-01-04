@@ -93,6 +93,13 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=1
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6375
 
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8
+BOARD_KERNEL_CMDLINE := earlycon=msm_geni_serial,0x04C8C000
+BOARD_KERNEL_CMDLINE := androidboot.console=ttyMSM0
+BOARD_KERNEL_CMDLINE := lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000
+BOARD_KERNEL_CMDLINE := swiotlb=0
+BOARD_KERNEL_CMDLINE := firmware_class.path=/vendor/firmware
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=4e00000.dwc3
@@ -150,7 +157,7 @@ TARGET_COPY_OUT_PRODUCT := product
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
-BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_FLASH_BLOCK_SIZE := 262144
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
