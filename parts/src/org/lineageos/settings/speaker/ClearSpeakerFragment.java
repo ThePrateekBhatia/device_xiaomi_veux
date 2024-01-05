@@ -67,8 +67,8 @@ public class ClearSpeakerFragment extends PreferenceFragmentCompat implements
 
     @Override
     public void onStop() {
-        stopPlaying();
         super.onStop();
+        stopPlaying();
     }
 
     public boolean startPlaying() {
@@ -96,15 +96,15 @@ public class ClearSpeakerFragment extends PreferenceFragmentCompat implements
     public void stopPlaying() {
         if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
             try {
-            mMediaPlayer.stop();
+                mMediaPlayer.stop();
             } catch (IllegalStateException e) {
                 Log.e(TAG, "Failed to stop media player!", e);
             } finally {
-            mMediaPlayer.reset();
-            mMediaPlayer.release();
+                mMediaPlayer.reset();
+                mMediaPlayer.release();
                 mMediaPlayer = null;
+            }
         }
-    }
         mClearSpeakerPref.setEnabled(true);
         mClearSpeakerPref.setChecked(false);
     }
