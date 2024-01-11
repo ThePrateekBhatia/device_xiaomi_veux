@@ -1,0 +1,20 @@
+[
+  {
+    "repository": "crdroidandroid/proprietary_vendor_xiaomi_veux",
+    "target_path": "vendor/xiaomi/veux"
+    "remote":"crdroid-gitlab"
+  },
+  {
+    "repository": "crdroidandroid/android_kernel_oneplus_sm8350",
+    "target_path": "kernel/xiaomi/sm6375"
+  },
+  {
+    "repository": "crdroidandroid/proprietary_vendor_xiaomi_veux-firmware",
+    "target_path": "vendor/xiaomi/veux-firmware",
+    "remote":"crdroid-gitlab"
+  },
+  {
+    "repository": "crdroidandroid/android_device_xiaomi_veux-kernel",
+    "target_path": "device/xiaomi/veux-kernel",
+  }
+]
