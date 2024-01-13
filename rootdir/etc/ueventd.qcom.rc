@@ -114,6 +114,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/msm_audio_cal        0660   system     audio
 /dev/msm_hweffects        0660   system     audio
 /dev/msm_rtac             0660   system     audio
+/sys/class/graphics/fb*     hdmi_audio_cb            0600    audioserver audio
 
 # Nfc permissions
 /dev/nq-nci               0660    nfc         nfc
