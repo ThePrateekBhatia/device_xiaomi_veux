@@ -1,0 +1,32 @@
+[
+    {
+        "repository": "ThePrateekBhatia/vendor_xiaomi_veux",
+        "target_path": "vendor/xiaomi/veux",
+        "branch": "fourteen",  
+        "remote": "gitlab"
+    },
+    {
+        "repository": "ThePrateekBhatia/device_xiaomi_veux-kernel",
+        "target_path": "device/xiaomi/veux-kernel",
+        "branch": "fourteen",
+        "remote": "github"
+    },
+    {
+        "repository": "ThePrateekBhatia/vendor_xiaomi_veux-firmware",
+        "target_path": "vendor/xiaomi/veux-firmware",
+        "branch": "MIUI-14.0.4.0-TKCMIXM",
+        "remote": "gitlab"
+    },
+    {
+        "repository": "crdroidandroid/android_kernel_oneplus_sm8350",
+        "target_path": "kernel/xiaomi/sm6375",
+        "branch": "14.0",
+        "remote": "github"
+    },
+    {
+        "repository": "crdroidandroid/android_hardware_xiaomi",
+        "target_path": "hardware/xiaomi",
+        "branch": "14.0",
+        "remote": "github"
+    }
+]
