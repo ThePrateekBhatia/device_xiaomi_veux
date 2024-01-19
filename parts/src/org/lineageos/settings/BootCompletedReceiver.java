@@ -22,6 +22,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+<<<<<<< HEAD
+=======
+import org.lineageos.settings.camera.NfcCameraService;
+import org.lineageos.settings.display.ColorService;
+import org.lineageos.settings.dolby.DolbyUtils;
+import org.lineageos.settings.doze.AodBrightnessService;
+import org.lineageos.settings.doze.DozeUtils;
+import org.lineageos.settings.doze.PocketService;
+import org.lineageos.settings.gestures.GestureUtils;
+import org.lineageos.settings.refreshrate.RefreshUtils;
+>>>>>>> f24c282 (marble: Import dolby audio)
 import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -33,7 +44,28 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
             return;
         }
+<<<<<<< HEAD
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
+=======
+    }
+
+    private static void onLockedBootCompleted(Context context) {
+        // Services that don't require reading from data.
+        ColorService.startService(context);
+        AodBrightnessService.startService(context);
+        PocketService.startService(context);
+        NfcCameraService.startService(context);
+        HighTouchPollingService.startService(context);
+        TouchOrientationService.startService(context);
+        overrideHdrTypes(context);
+    }
+
+    private static void onBootCompleted(Context context) {
+        // Data is now accessible (user has just unlocked).
+        DolbyUtils.getInstance(context);
+        DozeUtils.checkDozeService(context);
+        RefreshUtils.initialize(context);
+>>>>>>> f24c282 (marble: Import dolby audio)
         ThermalUtils.startService(context);
     }
 }

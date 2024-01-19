@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl \
+    audio.primary.default
 
 PRODUCT_PACKAGES += \
     audioadsprpcd \
@@ -216,6 +217,9 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
     prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
@@ -297,7 +301,9 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service \
-    vendor.qti.media.c2@1.0-service
+    vendor.qti.media.c2@1.0-service \
+    android.hardware.soundtrigger@2.3-impl \
+    audio.primary.default
 
 PRODUCT_PACKAGES += \
     libavservices_minijail \
