@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Paranoid Android
+ * Copyright (C) 2023 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,22 +14,23 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.speaker;
+package org.lineageos.settings.gestures;
 
 import android.os.Bundle;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.widget.R;
 
-public class ClearSpeakerActivity extends CollapsingToolbarBaseActivity {
+public class FpDoubleTapActivity extends CollapsingToolbarBaseActivity {
 
-    private static final String TAG_CLEARSPEAKER = "clearspeaker";
+    private static final String TAG = "fp_double_tap";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.content_frame,
-                new ClearSpeakerFragment(), TAG_CLEARSPEAKER).commit();
+                new FpDoubleTapFragment(), TAG).commit();
     }
+
 }
