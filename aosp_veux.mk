@@ -23,9 +23,9 @@ FORCE_AOSP_DIALER := true
 
 # Elixir flags
 IS_OFFICIAL := true
-ELIXIR_BUILD_TYPE := OFFICIAL
+ELIXIR_BUILD_TYPE := UNOFFICIAL
 ELIXIR_MAINTAINER := ꜰʀᴇᴀᴋʏ-ᴘʀᴀᴛᴇᴇᴋ
-BUILD_USERNAME := Freaky
+BUILD_USERNAME := Snowman
 BUILD_HOSTNAME := Elixir
 
 # Inherit from veux device
