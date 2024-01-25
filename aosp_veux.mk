@@ -24,7 +24,7 @@ FORCE_AOSP_DIALER := true
 # Elixir flags
 IS_OFFICIAL := true
 ELIXIR_BUILD_TYPE := UNOFFICIAL
-ELIXIR_MAINTAINER := ꜰʀᴇᴀᴋʏ-ᴘʀᴀᴛᴇᴇᴋ
+ELIXIR_MAINTAINER := Snowman
 BUILD_USERNAME := Snowman
 BUILD_HOSTNAME := Elixir
 
