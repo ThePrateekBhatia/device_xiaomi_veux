@@ -1,5 +1,6 @@
 //
 // Copyright (C) 2017-2021 The LineageOS Project
+//           (C) 2023 Paranoid Android
 //
 // SPDX-License-Identifier: Apache-2.0
 //
@@ -14,7 +15,15 @@ android_app {
     system_ext_specific: true,
     privileged: true,
 
+    overrides: ["MusicFX"],
     static_libs: [
+        "androidx.core_core",
         "org.lineageos.settings.resources",
+        "SettingsLib",
+        "vendor.xiaomi.hardware.displayfeature-V1.0-java",
     ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
 }

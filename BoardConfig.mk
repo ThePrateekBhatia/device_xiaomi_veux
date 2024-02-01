@@ -40,6 +40,13 @@ AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
 AUDIO_FEATURE_ENABLED_GKI := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 
+# Sepolicy - XiaomiParts
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+    $(DEVICE_PATH)/sepolicy/private/xiaomi/devicesettings
+
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
+    $(DEVICE_PATH)/sepolicy/public/xiaomi/devicesettings
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := peux,veux
 

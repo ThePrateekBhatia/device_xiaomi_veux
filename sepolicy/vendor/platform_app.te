@@ -21,6 +21,8 @@ allow platform_app vendor_hal_soter_hwservice:hwservice_manager find;
 allow platform_app vendor_qdsp_device:chr_file { ioctl open read write };
 allow platform_app vendor_xdsp_device:chr_file { ioctl open read write };
 
+# Allow Dirac App to read Dirac properties
+get_prop(platform_app, vendor_audio_prop)
 get_prop(platform_app, vendor_camera_prop)
 get_prop(platform_app, vendor_fingerprint_prop)
 allow platform_app vendor_sys_video_prop:file { read };

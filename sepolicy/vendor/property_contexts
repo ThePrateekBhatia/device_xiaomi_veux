@@ -1,5 +1,8 @@
 # Aware
 ro.vendor.aware_available               u:object_r:vendor_aware_available_prop:s0
+ro.vendor.dirac.                        u:object_r:vendor_audio_prop:s0
+persist.vendor.dirac.                   u:object_r:vendor_audio_prop:s0
+vendor.dirac.                           u:object_r:vendor_audio_prop:s0
 
 # Camera
 camera.                                 u:object_r:vendor_camera_prop:s0
