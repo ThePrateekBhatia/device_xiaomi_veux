@@ -44,6 +44,9 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy/public/xiaomi/devicesettings
 
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := peux,veux
 
