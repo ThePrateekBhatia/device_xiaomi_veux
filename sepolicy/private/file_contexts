@@ -1,2 +1,8 @@
 # Dev nodes
 /dev/stune(/.*)?                                        u:object_r:cgroup:s0
+
+# Health
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.xiaomi u:object_r:hal_health_default_exec:s0
+
+# Init
+/vendor/bin/init\.veux\.perf\.sh						  u:object_r:vendor_qti_init_shell_exec:s0
