@@ -44,6 +44,9 @@ ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
 
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Apn
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
@@ -83,12 +86,17 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libvisualizer
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # Audio Configs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_holi/audio_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_holi/bluetooth_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_holi/bluetooth_audio_policy_configuration_7_0.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
@@ -102,13 +110,10 @@ AUDIO_HAL_DIR := hardware/qcom-caf/sm8350/audio
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/holi/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_holi/audio_policy_configuration.xml
-
 # Automotive
 PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0-manager-lib
-    
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
@@ -123,8 +128,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
 PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration_7_0.xml \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2400
@@ -173,7 +178,7 @@ PRODUCT_PACKAGES += \
 
 # Dex
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 USE_DEX2OAT_DEBUG := false
 
@@ -597,6 +602,11 @@ PRODUCT_BOOT_JARS += \
 # TrustedUI
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
+
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend \
+    charger_res_images
 
 # Update Engine
 PRODUCT_PACKAGES += \

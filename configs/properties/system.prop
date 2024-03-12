@@ -30,6 +30,12 @@ ro.feas.enable=true
 # FS-verity
 ro.apk_verity.mode=2
 
+# Power Saving
+power.saving.mode=1
+pm.sleep_mode=1 
+ro.vold.umsdirtyratio=20
+ro.ril.disable.power.collapse=0
+
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
